@@ -7,17 +7,22 @@ body {
 }
 
 #container {
-  max-width: 960px;
+  /* max-width: 960px;  コンテナに適用すると画像が画面サイズに広がらない*/
   margin: 0 auto;
   /* background-color: pink; 適用範囲確認用*/
 }
 
 header,
-main,
 footer {
   width: 100%;
   margin: 0 auto;
+  max-width: 960px;
   /* background-color: lightcyan; 適用範囲確認用*/
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
 }
 
 header {
@@ -30,6 +35,7 @@ header {
 nav {
   /* background-color: blue; 適用範囲確認用*/
   font-size: 34px;
+  font-weight: 700;
   width: 598px;
   display: flex;
   justify-content: space-between;
@@ -45,7 +51,8 @@ h2 {
   font-size: 24px;
 }
 
-p {
+p,
+li {
   font-size: 18px;
 }
 
@@ -55,7 +62,7 @@ footer {
 
 
 #main_photo img {
-  height: 400px;
+  height: 100%;
   width: 100%;
 }
 
@@ -74,6 +81,11 @@ footer {
 }
 
 #main_photo {
+  margin: 0 auto;
+}
+
+article {
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -155,7 +167,7 @@ section {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   /* 768pxまでの幅の場合に適応される */
 
   nav {
